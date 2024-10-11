@@ -1,10 +1,17 @@
+import os
+from dotenv import load_dotenv
 import streamlit as st
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-# Set up the Gemini API
- # Replace with your Gemini API key
+# Load environment variables from a .env file
+load_dotenv()
+
+# Fetch the Gemini API key securely from the environment
+gemini_api_key = os.getenv('GEMINI_API_KEY')
+
+# Set up the Gemini model using the API key
 llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=gemini_api_key)
 
 # Create a prompt template for generating task instructions
