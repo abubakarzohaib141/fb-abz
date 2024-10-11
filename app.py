@@ -4,7 +4,7 @@ from langchain.chains import LLMChain
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Set up the Gemini API
-gemini_api_key = 'your_gemini_api_key_here'  # Replace with your Gemini API key
+gemini_api_key = 'AIzaSyBaSe5UbPtTApn6m4JT7lT5JgyRtVd2pXk'  # Replace with your Gemini API key
 llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=gemini_api_key)
 
 # Create a prompt template for generating task instructions
